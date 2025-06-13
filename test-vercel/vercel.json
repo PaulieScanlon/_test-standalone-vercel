@@ -1,0 +1,37 @@
+{
+  "version": 2,
+  "installCommand": "npm install --omit=dev",
+  "builds": [
+    {
+      "src": "index.mjs",
+      "use": "@vercel/node",
+      "config": {
+        "includeFiles": [
+          "index.mjs",
+          "instrumentation.mjs",
+          "mastra.mjs",
+          "package-lock.json",
+          "package.json",
+          "telemetry-config.mjs",
+          "tools",
+          "tools.mjs",
+          "tools/97131d4f-9cc4-4f61-94ae-135b0bf289c9.mjs",
+          ".mastra/output/**"
+        ]
+      }
+    },
+    {
+      "src": ".mastra/output/**",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "handle": "filesystem"
+    },
+    {
+      "src": "/api/(.*)",
+      "dest": "index.mjs"
+    }
+  ]
+}
