@@ -6,8 +6,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "mastra dev",
     "build": "mastra build",
-    "start": "mastra start",
-    "postbuild": "cp test-vercel/vercel.json .mastra/output"
+    "start": "mastra start"
   },
   "keywords": [],
   "author": "",
