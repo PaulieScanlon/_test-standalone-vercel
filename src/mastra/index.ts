@@ -16,10 +16,10 @@ export const mastra = new Mastra({
     name: "Mastra",
     level: "info"
   }),
-  deployer: new VercelDeployer()
-  // deployer: new VercelDeployer({
-  //   teamSlug: "paulie-scanlons-projects",
-  //   projectName: "test-standalone-vercel",
-  //   token: process.env.DEPLOYER_VERCEL_TOKEN!
-  // })
+  // deployer: new VercelDeployer()
+  deployer: new VercelDeployer({
+    teamSlug: "paulie-scanlons-projects",
+    projectName: "test-standalone-vercel",
+    token: process.env.DEPLOYER_VERCEL_TOKEN!
+  })
 });
