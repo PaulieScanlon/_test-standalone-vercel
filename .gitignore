@@ -8,3 +8,4 @@ dist
 *.db-*
 test-client.ts
 test
+.vercel
